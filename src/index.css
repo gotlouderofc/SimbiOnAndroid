@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Courier Prime", "Courier New", monospace, sans-serif;
+  --font-serif: "Courier Prime", "Courier New", monospace, Georgia, serif;
+  --font-courier: "Courier Prime", "Courier New", monospace;
+  
+  --color-primary: #97cc5b;
+  --color-secondary: #cee7aa;
+  --color-accent: #9acd32;
+  --color-dark: #000000;
+}
+
+/* Base Styles */
+html, body {
+  background-color: #FAF9F6;
+  color: #000000;
+  font-family: "Courier Prime", "Courier New", monospace !important;
+}
+
+/* Custom Scrollbars matching Simbi theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cee7aa;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #97cc5b;
+}
+
+/* ==========================================================================
+   Simbi Aesthetic styling overrides
+   ========================================================================== */
+
+#screenwriter-app {
+  background-color: #FAF9F6 !important;
+  color: #000000 !important;
+  font-family: "Courier Prime", "Courier New", monospace !important;
+}
+
+/* Map specific typography components to elegant Courier Prime formatting */
+#screenwriter-app h1,
+#screenwriter-app h2,
+#screenwriter-app h3,
+#screenwriter-app .logo-serif,
+.cover-title,
+.cover-page h2 {
+  font-family: "Courier Prime", "Courier New", monospace !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+}
+
+/* Clean text colors mapping */
+.text-neutral-100,
+.text-neutral-200,
+.text-neutral-350,
+.text-neutral-300 {
+  color: #000000 !important;
+}
+
+.text-neutral-500,
+.text-neutral-450,
+.text-neutral-400 {
+  color: #555555 !important;
+}
+
+.text-white {
+  color: #000000 !important;
+}
+
+/* Ensure button and action values remain light on dark block buttons */
+button.bg-primary span,
+button.bg-primary svg,
+button.bg-primary,
+button.bg-amber-500,
+button.bg-amber-500 span,
+button.bg-amber-500 svg,
+button.text-neutral-950,
+button.text-neutral-950 span,
+button.bg-neutral-850:hover,
+button.bg-neutral-850:hover span {
+  color: #000000 !important;
+}
+
+/* Core Catalogue Screen Elements Override */
+header.border-b {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+}
+
+header h1 {
+  font-family: "Courier Prime", "Courier New", monospace !important;
+  font-style: normal !important;
+  font-weight: 750 !important;
+  font-size: 1.65rem !important;
+  letter-spacing: -0.01em !important;
+}
+
+header p {
+  color: #666666 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* Document cards */
+.group.bg-neutral-900 {
+  background-color: #FFFFFF !important;
+  border: 1px solid #e5e5e5 !important;
+  box-shadow: 0 4px 14px rgba(151,204,91,0.06) !important;
+  border-radius: 12px !important;
+}
+
+.group.bg-neutral-900:hover {
+  border-color: #000000 !important;
+  box-shadow: 0 10px 24px rgba(151,204,91,0.12) !important;
+}
+
+.group.bg-neutral-900 h3 {
+  color: #000000 !important;
+}
+
+.group.bg-neutral-900 .border-t {
+  border-color: #e5e5e5 !important;
+}
+
+.group.bg-neutral-900 button {
+  background-color: #cee7aa !important;
+  color: #000000 !important;
+  border: 1px solid #97cc5b !important;
+}
+
+.group.bg-neutral-900 button:hover {
+  background-color: #97cc5b !important;
+}
+
+/* Logo gradient styling for 'Simbi' */
+.simbi-logo-gradient {
+  background: linear-gradient(135deg, #9acd32, #97cc5b) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-weight: 750 !important;
+}
+
+/* Core Sidebar Navigator and stats styling overrides */
+aside.w-64 {
+  background-color: #FFFFFF !important;
+  border-right: 1px solid #e5e5e5 !important;
+}
+
+aside.w-64 .p-4.border-b {
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+aside.w-64 .scene-item {
+  color: #1A1A1A !important;
+}
+
+aside.w-64 .scene-item:hover {
+  background-color: #FAF9F6 !important;
+  color: #5d8f25 !important;
+}
+
+aside.w-64 button.bg-[#1a2410]/20,
+aside.w-64 .scene-item.active {
+  background-color: #EBF4E2 !important;
+  border-left: 4px solid #97cc5b !important;
+  color: #5d8f25 !important;
+  font-weight: 700 !important;
+  border-radius: 0px !important;
+}
+
+aside.w-64 .bg-neutral-950\/40,
+aside.w-64 .bg-neutral-950\/60 {
+  background-color: #FAF9F6 !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
+aside.w-64 .bg-neutral-900 {
+  background-color: #FAF9F6 !important;
+  border-color: #e5e5e5 !important;
+}
+
+aside.w-64 kbd {
+  background-color: #EBF4E2 !important;
+  border-color: #e5e5e5 !important;
+  color: #5d8f25 !important;
+}
+
+/* Toolbar Design updates (Elegant light off-white block) */
+.sticky.top-0.z-40 {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+}
+
+.sticky.top-0.z-40 button {
+  background-color: #FFFFFF !important;
+  border-color: #e5e5e5 !important;
+  color: #1A1A1A !important;
+}
+
+.sticky.top-0.z-40 button:hover {
+  background-color: #EBF4E2 !important;
+  color: #5d8f25 !important;
+  border-color: #97cc5b !important;
+}
+
+.sticky.top-0.z-40 .h-6.w-px {
+  background-color: #cee7aa !important;
+}
+
+/* Status save indicators */
+.text-emerald-500 {
+  color: #97cc5b !important;
+}
+
+.text-amber-500 {
+  color: #9acd32 !important;
+}
+
+/* Active primary buttons */
+button.bg-amber-500 {
+  background-color: #97cc5b !important;
+  border-color: #cee7aa !important;
+  color: #000000 !important;
+}
+
+button.bg-amber-500:hover {
+  background-color: #9acd32 !important;
+}
+
+/* Action format list dropdown overlay styles */
+.relative .absolute.left-0.mt-1\.5.w-56 {
+  background-color: #000000 !important;
+  border: 1px solid #1a2215 !important;
+  box-shadow: 0 10px 30px rgba(151,204,91,0.15) !important;
+}
+
+.relative .absolute.left-0.mt-1\.5.w-56 div {
+  color: #97cc5b !important;
+  border-bottom-color: #1a2215 !important;
+}
+
+.relative .absolute.left-0.mt-1\.5.w-56 button {
+  color: #cee7aa !important;
+}
+
+.relative .absolute.left-0.mt-1\.5.w-56 button:hover {
+  background-color: #151c11 !important;
+  color: #97cc5b !important;
+}
+
+/* Page workspace backgrounds mapping to concrete earthy light-gray-green */
+main.bg-neutral-900 {
+  background-color: #FAF9F6 !important;
+}
+
+/* Paper wrappers inside drafting table */
+.shadow-2xl.rounded.bg-white {
+  box-shadow: 0 12px 35px rgba(151,204,91,0.06) !important;
+  border: 1px solid #e5e5e5 !important;
+}
+
+/* Metadata box */
+main.bg-neutral-900 .bg-neutral-950 {
+  background-color: #FFFFFF !important;
+  border: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 10px rgba(151,204,91,0.04) !important;
+}
+
+main.bg-neutral-900 .bg-neutral-950 button {
+  background-color: #e5e5e5 !important;
+  color: #000000 !important;
+}
+
+main.bg-neutral-900 .bg-[#0a0a0a] button:hover {
+  background-color: #97cc5b !important;
+}
+
+/* Modal formatting settings */
+.fixed.inset-0 .bg-neutral-900 {
+  background-color: #FFFFFF !important;
+  border: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08) !important;
+}
+
+.fixed.inset-0 .bg-neutral-900 input,
+.fixed.inset-0 .bg-neutral-900 textarea {
+  background-color: #FAF9F6 !important;
+  border: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+}
+
+.fixed.inset-0 .bg-neutral-900 input:focus,
+.fixed.inset-0 .bg-neutral-900 textarea:focus {
+  border-color: #97cc5b !important;
+}
+
+.fixed.inset-0 .bg-neutral-900 .border-b,
+.fixed.inset-0 .bg-neutral-900 .border-t {
+  border-color: #e5e5e5 !important;
+}
+
+/* Toast styling override */
+.fixed.bottom-6.right-6 .animate-slide-up {
+  background-color: #FFFFFF !important;
+  border: 1px solid #e5e5e5 !important;
+  color: #000000 !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.05) !important;
+  border-left: 4px solid #97cc5b !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   Screenplay Mechanical Document Elements (Standard Industry Formats)
+   ========================================================================== */
+
+.font-courier {
+  font-family: "Courier Prime", "Courier New", monospace !important;
+}
+
+.script-line {
+  font-family: "Courier Prime", "Courier New", monospace !important;
+  font-size: 11pt !important;
+  line-height: 1.55 !important;
+  color: #000000;
+  text-align: left;
+  min-height: 1.55em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  outline: none;
+  border: none;
+  caret-color: #97cc5b;
+  transition: background-color 0.1s ease;
+  padding: 1px 4px;
+}
+
+/* Active Line highlight in writing mode (Simbi style warm focus block) */
+.script-line.active-line {
+  background-color: rgba(151, 204, 91, 0.05) !important;
+  box-shadow: -3px 0 0 #97cc5b !important;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Standard Screenplay Indentures */
+.script-line.scene-heading {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-top: 18px !important;
+  margin-bottom: 9px !important;
+  letter-spacing: 0.01em;
+}
+
+.script-line.action {
+  margin-top: 0px !important;
+  margin-bottom: 9px !important;
+}
+
+.script-line.character {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-top: 14px !important;
+  margin-bottom: 1px !important;
+  padding-left: 35% !important;
+  padding-right: 15% !important;
+}
+
+.script-line.parenthetical {
+  font-style: italic !important;
+  margin-top: 0px !important;
+  margin-bottom: 1px !important;
+  padding-left: 25% !important;
+  padding-right: 25% !important;
+}
+
+.script-line.dialogue {
+  margin-top: 0px !important;
+  margin-bottom: 9px !important;
+  padding-left: 20% !important;
+  padding-right: 20% !important;
+}
+
+.script-line.transition {
+  text-transform: uppercase !important;
+  text-align: right !important;
+  margin-top: 18px !important;
+  margin-bottom: 18px !important;
+  padding-right: 8% !important;
+}
+
+.script-line.shot {
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-top: 14px !important;
+  margin-bottom: 9px !important;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

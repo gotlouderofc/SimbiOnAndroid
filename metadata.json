@@ -1,0 +1,8 @@
+{
+  "name": "Remix: ScreenWriter Pro",
+  "description": "An elegant, distraction-free screenwriting editor with professional formatting, real-time word stats, local persistence, and high-fidelity PDF exporting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
